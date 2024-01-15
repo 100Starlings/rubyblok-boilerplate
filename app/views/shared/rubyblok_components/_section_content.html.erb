@@ -1,0 +1,40 @@
+<%= editable_component(component) %>
+
+<div class="section_content <%= component["layout"] %>">
+			<div class="hidden md:block md:px-0 xl:p-0 w-full relative">
+				<div class="relative h-[26rem] w-full flex items-center">
+					<div class="p-0 rounded-lg overflow-hidden h-[20rem] w-full max-w-2xl relative border-0 border-black bg-cover">
+            <img src="<%= component["image"]['filename'] %>" alt="" class="h-full w-full bg-cover"/>
+					</div>
+				</div>
+			</div>
+
+			<span class="border-l-2 border-dotted border-gray-600 md:block hidden"></span>
+			<div class="flex flex-col items-end w-full">
+				<div key="{title}" class="mb-10 md:mb-0 md:h-[26rem] max-w-2xl flex items-center">
+					<div class="relative gap-4 flex md:flex-col">
+						<span
+							class="md:block hidden border-2 rounded-full border-gray-600 bg-black absolute left-[-3.2em] mt-3 p-2 h-2 w-2 text-gray-900"></span>
+						<div class="flex items-center bg-blue p-2 rounded-md h-10 min-w-[2.5rem] max-w-[2.5rem] md:mr-4 text-white">
+									<img src="<%= component["icon"]['filename'] %>" alt="" cclass="rounded-lg h-full w-full">    
+						</div>
+						<div class="flex flex-col gap-4">
+							<span>
+								<div class="text-left font-semibold text-xl mb-2 text-gray-400">
+									<%= render_content(component["title"]) %>
+								</div>
+								<div class="text-gray-400 text-left">
+									<%= render_content(component["text"]) %>
+
+								</div>
+							</span>
+							<div class="md:hidden w-full max-h-[10rem] rounded-lg overflow-hidden mb-4">
+								<img
+									src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2669&q=80"
+									alt="" class="rounded-lg" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

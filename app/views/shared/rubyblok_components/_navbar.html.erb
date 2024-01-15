@@ -1,0 +1,13 @@
+<div class="navbar">
+  <a href="/">
+    <img src="<%= component["logo"]['filename'] %>" alt="" class="h-full w-full bg-cover"/>
+  </a>
+  <nav class="flex gap-10">
+    <% component["nav_links"].each do |blok| %>
+      <%= render_component(blok) %>
+        <% end %>
+  </nav>
+  <% component["nav_cta"].each do |blok| %>
+    <%= render_component(blok) %>
+      <% end %>
+</div>

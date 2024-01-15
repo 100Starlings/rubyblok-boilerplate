@@ -1,0 +1,19 @@
+<%= editable_component(component) %>
+
+	<div class="w-full flex flex-row max-w-6xl items-center">
+		<div class="section_content_details_img  <%= component["layout"] %>">
+      <img src="<%= component["image"]['filename'] %>" alt="" class="section_content_details_img"/>
+		</div>
+
+		<div class="w-full flex flex-col gap-4 items-start">
+					<div class="text-left text-[1.15rem] font-bold leading-[1.15] text-gray-700 md:text-[1.5rem] md:leading-[1.25]">
+				<%= render_content(component["header"]) %>
+			</div>
+			<div class="text-left text-[1.25rem] leading-[1.75rem] font-normal text-gray-700 md:max-w-screen-sm md:text-[1rem] md:line-[1.25rem]">
+				<%= render_content(component["description"]) %>
+			</div>
+			 			<% component["button"].each do |blok| %>
+				<%= render_component(blok) %>
+					<% end %>
+		</div>
+	</div>

@@ -1,0 +1,19 @@
+<%= editable_component(component) %>
+
+	<section class="content_section <%= component["layout"] %>">
+			<div class="content_section_header_wrapper">
+				<a class="title">
+					<%= render_content(component["header"]) %>
+				</a>
+				<div class="description">
+					<%= render_content(component["description"]) %>
+				</div>
+			</div>
+
+		<div class="section_content <%= component["layout"] %>">
+			<% component["section_content"].each do |blok| %>
+				<%= render_component(blok) %>
+					<% end %>
+		</div>
+		</div>
+	</section>

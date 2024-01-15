@@ -1,0 +1,7 @@
+<%= editable_component(component) %>
+
+<div class="page_container">
+  <% component["page_container"].each do |blok| %>
+    <%= render_component(blok) %>
+  <% end %>
+</div>

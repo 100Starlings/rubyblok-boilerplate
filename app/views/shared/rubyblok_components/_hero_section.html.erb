@@ -1,0 +1,21 @@
+<%= editable_component(component) %>
+	<section
+		class="hero_section">
+		<div class="hero_content_wrapper">
+			<div
+				class="hero_header">
+				<%= render_content(component["header"]) %>
+			</div>
+
+			<div
+				class="hero_subtitle">
+				<%= render_content(component["subheader"]) %>
+			</div>
+
+			<div class="hero_cta_wrapper">
+			  <% component["cta_buttons"].each do |blok| %>
+      		<%= render_component(blok) %>
+        <% end %>
+			</div>
+		</div>
+	</section>

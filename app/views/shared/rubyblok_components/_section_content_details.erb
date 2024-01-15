@@ -1,0 +1,19 @@
+<%= editable_component(component) %>
+
+	<div class="section_content flex-row">
+		<div class="section_content_details_img  <%= component["layout"] %>">
+      <img src="<%= component["image"]['filename'] %>" alt="" class="section_content_details_img"/>
+		</div>
+
+		<div class="section_content_details_content">
+					<div class="header">
+				<%= render_content(component["header"]) %>
+			</div>
+			<div class="description left">
+				<%= render_content(component["description"]) %>
+			</div>
+			 			<% component["button"].each do |blok| %>
+				<%= render_component(blok) %>
+					<% end %>
+		</div>
+	</div>
