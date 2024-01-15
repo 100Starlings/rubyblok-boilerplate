@@ -1,6 +1,21 @@
 # Rubyblok
 
+Storyblok Headless CMS and Rails app integration
 
+## Context
+Headless Content Management Systems (CMS) are great for publising content across diferent displays and devices. This kind of system separates your data (the “body”) from how it’s presented (the “head”), hence the term “headless”. 
+
+Rubyblok integrates a Rails app to a Headless CMS Solution, [Storyblok](https://www.storyblok.com/). This creates an advanced caching and persistence layer. Positioned between your application and Storyblok, this layer leverages your app's database to store JSON data from Storyblok. To optimize data access, we seamlessly integrate with your app's caching strategies, such as Memcached and Redis.
+
+## Why Rubyblok?
+Rubyblok's streamlined publishing and viewing process ensures that your content reaches the audience with speed. With an intuitive admin interface and webhooks triggering seamless updates, Rubyblok accelerates content delivery, giving you a competitive edge.
+
+### For developers
+- Self hosted solution, you own your content as you create it
+- Reduce data usage and increase performance: By having your content available locally, you don't need to call Storyblok's API every single time and can save storage quota.
+- Shorten the feedback loop: You see the content as it is when you edit, on a What You See Is What You Get interface.
+
+Get to know [more technical details about Rubyblok here.](https://rubyblok-demo-staging-4f46f7cfa897.herokuapp.com/product-details)
 
 ## Setup
 
