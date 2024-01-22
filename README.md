@@ -36,7 +36,11 @@ brew install postgresql@14
 brew services start postgresql
 ```
 
-For manual configuration, see `.tool-versions`.
+Add a `.tool-versions` file:
+```
+ruby 3.2.2
+nodejs 16.15.0
+```
 
 Install the app dependencies:
 
@@ -66,11 +70,13 @@ Build tailwind:
 bundle exec rails tailwindcss:build
 ```
 
-Or keep it running with:
+To continuously build the tailwind styles:
 
 ```bash
 bundle exec rails tailwindcss:watch
 ```
+
+This will watch for changes in your Tailwind CSS files and automatically recompile them as needed.
 
 Run the Rails server:
 
@@ -79,16 +85,6 @@ bundle exec rails s
 ```
 
 Open it at [http://localhost:3000](http://localhost:3000).
-
-### Tailwind
-
-To continuously build the tailwind styles:
-
-```bash
-bundle exec rails tailwindcss:watch
-```
-
-This will watch for changes in your Tailwind CSS files and automatically recompile them as needed.
 
 ### Local proxy to Storyblok
 
@@ -109,4 +105,10 @@ npm install local-ssl-proxy -g
 local-ssl-proxy --source 3333 --target 3000 --cert localhost.pem --key localhost-key.pem
 ```
 
-This will start a proxy server. Now, just go to the Storyblok Space and it will be working! :tada:
+This will start a proxy server. 
+
+### Demo blocks creation
+WIP :construction:
+(Automation script here)
+
+Now, just go to the Storyblok Space and it will be working! :tada:
