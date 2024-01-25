@@ -1,13 +1,72 @@
+<%= editable_component(component) %>
+
 <div class="navbar">
   <a href="/">
-    <img src="<%= component["logo"]['filename'] %>" alt="" class="h-full w-full bg-cover"/>
+    <img src="<%= component["logo"]['filename'] %>" alt="" class="nav_logo"/>
   </a>
-  <nav class="flex gap-10">
+
+  <nav class="nav_links_wrapper">
     <% component["nav_links"].each do |blok| %>
       <%= render_component(blok) %>
-        <% end %>
+    <% end %>
   </nav>
-  <% component["nav_cta"].each do |blok| %>
-    <%= render_component(blok) %>
-      <% end %>
+<span class="flex gap-6">
+      <% component["nav_cta"].each do |blok| %>
+      <%= render_component(blok) %>
+    <% end %>
+  <div class="mobile_nav_wrapper">
+    <button onclick="toggleMobileNav()" class="flex font-semibold">
+      <span id="mobileNavIcon">
+        <%= image_tag component["open_mobile_nav_icon"]['filename'], alt: "", class: "h-8 w-8 bg-cover" %>
+      </span>
+    </button>
+  </div>
+</span>
+
+
 </div>
+
+<div id="mobileNav" class="mobile_nav">
+  <nav id="mobileNavLinks" class="mobile_nav_links">
+    <% component["nav_links"].each do |blok| %>
+      <%= render_component(blok) %>
+    <% end %>
+  </nav>
+</div>
+
+
+<script>
+  // Initialize state
+  var isMobileNavOpen = false;
+  var body = document.body;
+
+  // Function to toggle mobile navigation
+  function toggleMobileNav() {
+    var mobileNav = document.getElementById('mobileNav');
+    var mobileNavLinks = document.getElementById('mobileNavLinks');
+    var mobileNavIcon = document.getElementById('mobileNavIcon');
+
+    if (isMobileNavOpen) {
+      // Close mobile navigation
+      mobileNav.style.height = '0';
+      mobileNavLinks.style.display = 'none';
+      body.classList.remove('overflow-hidden');
+
+      // Update state
+      isMobileNavOpen = false;
+    } else {
+      // Open mobile navigation
+      mobileNav.style.height = '100vh';
+      mobileNavLinks.style.display = 'flex';
+      body.classList.add('overflow-hidden');
+
+      // Update state
+      isMobileNavOpen = true;
+    }
+
+    // Update mobile navigation icon
+    mobileNavIcon.innerHTML = isMobileNavOpen
+      ? '<%= image_tag component["close_mobile_nav_icon"]['filename'], alt: "", class: "h-8 w-8 bg-cover" %>'
+      : '<%= image_tag component["open_mobile_nav_icon"]['filename'], alt: "", class: "h-8 w-8 bg-cover" %>';
+  }
+</script>
