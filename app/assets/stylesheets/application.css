@@ -349,6 +349,14 @@ background-color: white;
   }
 }
 
+.section_content.center {
+  align-items: center;
+}
+
+.section_content.top {
+  align-items: flex-start;
+}
+
 
 .section_content_details {
   display: flex;
