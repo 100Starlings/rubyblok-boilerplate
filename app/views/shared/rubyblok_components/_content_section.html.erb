@@ -10,7 +10,7 @@
 				</div>
 			</div>
 
-		<div class="section_content <%= component["layout"] %>">
+		<div class="section_content <%= component["layout"] %> <%= component["align_items"] %>">
 			<% component["section_content"].each do |blok| %>
 				<%= render_component(blok) %>
 					<% end %>
