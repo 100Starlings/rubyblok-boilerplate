@@ -1,25 +1,22 @@
-# Rubyblok
-
-Storyblok Headless CMS and Rails app integration
+# Rubyblok Boilerplate
+This repository is a demonstration of the [Rubyblok gem](https://github.com/100Starlings/rubyblok), which provides integration between your Rails app and a Content Management System. 
 
 ## Context
-Headless Content Management Systems (CMS) are great for publising content across diferent displays and devices. This kind of system separates your data (the “body”) from how it’s presented (the “head”), hence the term “headless”. 
-
-Rubyblok integrates a Rails app to a Headless CMS Solution, [Storyblok](https://www.storyblok.com/). This creates an advanced caching and persistence layer. Positioned between your application and Storyblok, this layer leverages your app's database to store JSON data from Storyblok. To optimize data access, we seamlessly integrate with your app's caching strategies, such as Memcached and Redis.
+Rubyblok is an easy way to integrate a visual CMS ([Storyblok](https://www.storyblok.com/)) into your Rails app, providing you with a proven integration path and quality of life features. With Rubyblok, you can edit your content online, preview it in real-time, and publish it with just the click of a button.
 
 ## Why Rubyblok?
-Rubyblok's streamlined publishing and viewing process ensures that your content reaches the audience with speed. With an intuitive admin interface and webhooks triggering seamless updates, Rubyblok accelerates content delivery, giving you a competitive edge.
-
-### For developers
-- Self hosted solution, you own your content as you create it
-- Reduce data usage and increase performance: By having your content available locally, you don't need to call Storyblok's API every single time and can save storage quota.
-- Shorten the feedback loop: You see the content as it is when you edit, on a What You See Is What You Get interface.
-
-Get to know [more technical details about Rubyblok here.](https://rubyblok-demo-staging-4f46f7cfa897.herokuapp.com/product-details)
+Rubyblok provides an abstraction layer and stores all your content locally, reducing data usage and enhancing performance. This enables new functionalities that leverage the local data, such as global content search, sitemaps, and listings. Ultimately, this setup increases resilience by eliminating dependency on external data sources.
 
 ## Setup
 
-Use asdf-vm to set your Ruby version automatically:
+This project requires the following setup:
+- ruby 3.2.2
+- nodejs 16.15.0
+- postgresql 14
+
+Use the version managers of your preference to install.
+
+Here is a simple way using asdf-vm to set them automatically:
 
 ```bash
 brew install asdf
@@ -54,13 +51,15 @@ Create the database:
 bundle exec rails db:setup
 ```
 
+[Click here](https://app.storyblok.com/?_gl=1*196uoul*_gcl_au*MTg1NjA5NjA0MS4xNzA5MDY5ODk3#!/signup) to create a free acount at Storyblok, the platform where you will have access to the visual and real-time content editing.
+
 Create the `.env.local` file and add your `STORYBLOK_API_TOKEN`:
 
 ```bash
 mv .env .env.local
 ```
 
-Get the token at _Storyblok Space > Settings > Access token_ page.
+Get your Storyblok API token in your account, at _Storyblok Space > Settings > Access token_ page.
 
 ## Development
 
