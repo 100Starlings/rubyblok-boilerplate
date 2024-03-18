@@ -122,6 +122,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2023.0808)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.5)
     minitest (5.20.0)
     msgpack (1.7.2)
     net-imap (0.3.7)
@@ -135,11 +136,8 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.5.9)
-    nokogiri (1.15.5-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-linux)
+    nokogiri (1.15.5)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     pg (1.5.3)
     public_suffix (5.0.3)
@@ -242,6 +240,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  arm64-darwin-23
   x86_64-darwin-21
   x86_64-linux
 
@@ -266,7 +265,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 3.3.0p0
 
 BUNDLED WITH
    2.4.12

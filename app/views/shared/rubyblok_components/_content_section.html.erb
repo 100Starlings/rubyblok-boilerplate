@@ -1,10 +1,10 @@
 <%= editable_component(component) %>
 
-	<section class="content_section <%= component["layout"] %>">
+	<section class="content_section <%= component["layout"] %> <%= component["hidden"] %>">
 			<div class="content_section_header_wrapper">
-				<a class="title">
-					<%= render_content(component["header"]) %>
-				</a>
+				<div class="header">
+					<%= render_content(component["section_header"]) %>
+				</div>
 				<div class="description">
 					<%= render_content(component["description"]) %>
 				</div>

@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: redirect('/home')
 
   get '/:page' => 'pages#index'
+  match '*path', to: 'application#render_not_found', via: :all
 end

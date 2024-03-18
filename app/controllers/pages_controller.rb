@@ -6,5 +6,8 @@ class PagesController < ApplicationController
 
     story_id = params[:page]
     @story = get_story(story_id)
+    
+  rescue StandardError
+    render_not_found
   end
 end

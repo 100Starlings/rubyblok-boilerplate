@@ -1,0 +1,18 @@
+<%= editable_component(component) %>
+
+  <a href="<%= component["card_link"] %>" class="content_card <%= component["icon_placement"] %>">
+      <%# <%= blok.id if blok.respond_to?(:with_icon) %>
+				<div class="content_card_icon">
+					<img src="<%= component["icon"]['filename'] %>" alt="<%= component["icon"]['filename'] %>">    
+				</div>
+        <div>
+          <div class="title">
+            <%= render_content(component["title"]) %>
+          </div>
+          <div class="text <%= component['text_align'] %>">
+            <%= render_content(component["text"]) %>
+          </div>
+        </div>
+  </a>
+
+  

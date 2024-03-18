@@ -2,22 +2,23 @@
 
 <div class="navbar">
   <a href="/">
-    <img src="<%= component["logo"]['filename'] %>" alt="" class="nav_logo"/>
+    <img src="<%= component["logo"]['filename'] %>" alt="" class="nav-logo-light"/>
+    <img src="<%= component["logo_dark"]['filename'] %>" alt="" class="nav-logo-dark"/>
   </a>
 
+<span class="nav_content_wrapper">
   <nav class="nav_links_wrapper">
     <% component["nav_links"].each do |blok| %>
       <%= render_component(blok) %>
     <% end %>
   </nav>
-<span class="flex gap-6">
       <% component["nav_cta"].each do |blok| %>
       <%= render_component(blok) %>
     <% end %>
   <div class="mobile_nav_wrapper">
-    <button onclick="toggleMobileNav()" class="flex font-semibold">
+    <button onclick="toggleMobileNav()" class="">
       <span id="mobileNavIcon">
-        <%= image_tag component["open_mobile_nav_icon"]['filename'], alt: "", class: "h-8 w-8 bg-cover" %>
+        <%= image_tag component["open_mobile_nav_icon"]['filename'], alt: "Mobile nav icon", class: "mobile_nav_icon" %>
       </span>
     </button>
   </div>
@@ -27,7 +28,7 @@
 </div>
 
 <div id="mobileNav" class="mobile_nav">
-  <nav id="mobileNavLinks" class="mobile_nav_links">
+  <nav id="mobileNavLinks" class="mobile_nav_links hidden">
     <% component["nav_links"].each do |blok| %>
       <%= render_component(blok) %>
     <% end %>
