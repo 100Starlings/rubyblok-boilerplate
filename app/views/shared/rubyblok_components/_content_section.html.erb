@@ -1,19 +1,7 @@
-<%= editable_component(component) %>
 
-	<section class="content_section <%= component["layout"] %> <%= component["hidden"] %>">
-			<div class="content_section_header_wrapper">
-				<div class="header">
-					<%= render_content(component["section_header"]) %>
-				</div>
-				<div class="description">
-					<%= render_content(component["description"]) %>
-				</div>
-			</div>
-
-		<div class="section_content <%= component["layout"] %> <%= component["align_items"] %>">
-			<% component["section_content"].each do |blok| %>
-				<%= render_component(blok) %>
-					<% end %>
+	<section class="content_section <%= blok.layout %>">
+		<div class="section_content <%= blok.layout %> <%= blok.align_items %>">
+			<%= rubyblok_blocks_tag(blok.section_content) %>
 		</div>
 		</div>
 	</section>

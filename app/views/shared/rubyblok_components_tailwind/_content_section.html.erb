@@ -1,19 +1,15 @@
-<%= editable_component(component) %>
-
-	<section class="flex gap-4 max-w-6xl w-full items-center <%= component["layout"] %>">
+	<section class="flex gap-4 max-w-6xl w-full items-center <%= blok.layout %>">
 			<div class="flex flex-col items-center gap-4 mb-6 md:gap-7 md:mb-7">
 				<a class="text-center text-1.5xl leading-2xl font-bold text-gray md:text-2xl md:leading-1">
-					<%= render_content(component["section_header"]) %>
+					<%= rubyblok_content_tag(blok.section_header) %>
 				</a>
 				<div class="text-center text-[1.25rem] leading-[1.75rem] font-normal text-gray-700 md:max-w-screen-sm md:text-[1rem]">
-					<%= render_content(component["description"]) %>
+					<%= rubyblok_content_tag(blok.description) %>
 				</div>
 			</div>
 
-		<div class="w-full max-w-6xl items-center <%= component["layout"] %>">
-			<% component["section_content"].each do |blok| %>
-				<%= render_component(blok) %>
-					<% end %>
+		<div class="w-full max-w-6xl items-center <%= blok.layout %>">
+			<%= rubyblok_blocks_tag(blok.section_content) %>
 		</div>
 		</div>
 	</section>

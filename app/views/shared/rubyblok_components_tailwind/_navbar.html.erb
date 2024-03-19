@@ -1,13 +1,9 @@
 <div class="bg-white text-black overflow-hidden fixed top-0 w-full flex justify-between px-4 py-2.5 items-center z-50 shadow-md">
   <a href="/">
-    <img src="<%= component["logo"]['filename'] %>" alt="" class="h-full w-full bg-cover"/>
+    <img src="<%= blok.logo.filename %>" alt="" class="h-full w-full bg-cover"/>
   </a>
   <nav class="flex gap-10">
-    <% component["nav_links"].each do |blok| %>
-      <%= render_component(blok) %>
-        <% end %>
+    <%= rubyblok_blocks_tag(blok.nav_links) %>
   </nav>
-  <% component["nav_cta"].each do |blok| %>
-    <%= render_component(blok) %>
-      <% end %>
+  <%= rubyblok_blocks_tag(blok.nav_cta) %>
 </div>

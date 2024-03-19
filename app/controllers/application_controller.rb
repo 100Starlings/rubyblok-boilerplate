@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
 
   attr_reader :meta_title, :meta_description, :keywords, :robots
 
-  rescue_from ActionController::RoutingError, 
-              AbstractController::ActionNotFound, 
+  rescue_from ActionController::RoutingError,
+              AbstractController::ActionNotFound,
               ActionController::UnknownFormat,
               ActiveRecord::RecordNotFound,
               ActionController::MethodNotAllowed, with: :render_not_found

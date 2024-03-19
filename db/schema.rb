@@ -10,8 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_19_003053) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "page_objects", force: :cascade do |t|
+    t.string "storyblok_story_id"
+    t.string "storyblok_story_slug"
+    t.string "storyblok_story_content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["storyblok_story_slug"], name: "index_page_objects_on_storyblok_story_slug", unique: true
+  end
 
 end

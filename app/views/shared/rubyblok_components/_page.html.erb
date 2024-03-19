@@ -1,5 +1,1 @@
-<%= editable_component(component) %>
-
-<% component["page_container"].each do |blok| %>
-  <%= render_component(blok) %>
-<% end %>
+<%= rubyblok_blocks_tag(blok.page_container) %>

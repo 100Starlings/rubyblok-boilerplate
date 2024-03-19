@@ -1,21 +1,18 @@
-<%= editable_component(component) %>
 	<section
 		class="min-h-screen flex flex-col items-center py-4 px-1 w-full bg-white text-black md:px-1">
 		<div class="mt-auto mb-auto flex flex-col gap-2 items-center text-center">
 			<div
 				class="text-center text-[2rem] leading-[3rem] font-bold tracking-wide text-gray-700 md:text-[4rem] md:leading-[5rem]">
-				<%= render_content(component["section_header"]) %>
+				<%= rubyblok_content_tag(blok.header) %>
 			</div>
 
 			<div
 				class="text-center text-[1rem] leading-[1.5rem] font-normal text-gray-500 md:max-w-screen-sm md:text-[1.25rem] md:line-[2rem]">
-				<%= render_content(component["subheader"]) %>
+				<%= rubyblok_content_tag(blok.subheader) %>
 			</div>
 
 			<div class="flex flex-row gap-4 items-center text-center">
-			  <% component["cta_buttons"].each do |blok| %>
-      		<%= render_component(blok) %>
-        <% end %>
+			  <%= rubyblok_blocks_tag(blok.cta_buttons) %>
 			</div>
 		</div>
 	</section>

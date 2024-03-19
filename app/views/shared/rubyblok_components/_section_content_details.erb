@@ -1,19 +1,17 @@
-<%= editable_component(component) %>
 
 	<div class="section_content flex-row">
-		<div class="section_content_details_img  <%= component["layout"] %>">
-      <img src="<%= component["image"]['filename'] %>" alt="" class="section_content_details_img"/>
+		<div class="section_content_details_img  <%= blok.layout %>">
+      <img src="<%= blok.image.filename %>" alt="" class="section_content_details_img"/>
 		</div>
 
 		<div class="section_content_details_content">
 					<div class="header">
-				<%= render_content(component["section_header"]) %>
+						<% binding.pry%>
+				<%= rubyblok_content_tag(blok.section_header) %>
 			</div>
 			<div class="description left">
-				<%= render_content(component["description"]) %>
+				<%= rubyblok_content_tag(blok.description) %>
 			</div>
-			 			<% component["button"].each do |blok| %>
-				<%= render_component(blok) %>
-					<% end %>
+			 	<%= rubyblok_blocks_tag(blok.button) %>
 		</div>
 	</div>

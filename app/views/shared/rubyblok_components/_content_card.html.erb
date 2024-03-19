@@ -1,16 +1,15 @@
-<%= editable_component(component) %>
 
-  <a href="<%= component["card_link"] %>" class="content_card <%= component["icon_placement"] %>">
+  <a href="<%= blok.card_link %>" class="content_card <%= blok.icon_placement%>">
       <%# <%= blok.id if blok.respond_to?(:with_icon) %>
 				<div class="content_card_icon">
-					<img src="<%= component["icon"]['filename'] %>" alt="<%= component["icon"]['filename'] %>">    
+					<img src="<%= blok.icon.filename %>" alt="<%= blok.icon.filename %>">
 				</div>
         <div>
           <div class="title">
-            <%= render_content(component["title"]) %>
+            <%= rubyblok_content_tag(blok.title) %>
           </div>
-          <div class="text <%= component['text_align'] %>">
-            <%= render_content(component["text"]) %>
+          <div class="text <%= blok.text_align %>">
+            <%= rubyblok_content_tag(blok.text) %>
           </div>
         </div>
   </a>
