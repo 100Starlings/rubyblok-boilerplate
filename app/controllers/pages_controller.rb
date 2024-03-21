@@ -28,20 +28,14 @@ class PagesController < ApplicationController
   end
 
   def set_site_config
-    @background_gradient = get_story('site-config')['background_gradient']
-    @primary_color    = get_story('site-config')['primary_color']['color']
-    @primary_color_dark_mode    = get_story('site-config')['primary_color_dark_mode']['color']
-    @secondary_color  = get_story('site-config')['secondary_color']['color']
-    @secondary_color_dark_mode  = get_story('site-config')['secondary_color_dark_mode']['color']
-    @background_color  = get_story('site-config')['background_color']['color']
-    @background_color_dark_mode  = get_story('site-config')['background_color_dark_mode']['color']
-    @card_bg_color  = get_story('site-config')['card_bg_color']['color']
-    @card_bg_color_dark_mode  = get_story('site-config')['card_bg_color_dark_mode']['color']
-    @opbg  = get_story('site-config')['opbg']['color']
-    @opbg_dark_mode  = get_story('site-config')['opbg_dark_mode']['color']
-
-    @primary_font     = get_story('site-config')['primary_font']
+    @set_site_config ||= get_story('site-config')
+    @set_site_config.each do |key, value|
+      instance_variable_set("@#{key}", value['color']) if value.is_a?(Hash) && value.key?('color')
+      instance_variable_set("@#{key}", value) unless value.is_a?(Hash) && value.key?('color')
+    end
+    @primary_font = @set_site_config['font_family']
   end
+
 
   def page_content
     page_content ||= get_story(@slug)
