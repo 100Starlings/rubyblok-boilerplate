@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     set_meta_tags
     set_site_config
 
-  rescue StandardErrq
+  rescue StandardError
     render_not_found
   end
 
