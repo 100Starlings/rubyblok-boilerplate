@@ -22,6 +22,6 @@ class ApplicationController < ActionController::Base
     # TODO: actually report the errors via Apssignal
     Rails.logger.error(exception)
     # TODO: add TrackError.capture_exception(exception)
-    render template: 'errors/server_error', status: 500, layout: 'static'
+    render template: 'errors/server_error', status: 500, layout: 'static' 
   end
 end

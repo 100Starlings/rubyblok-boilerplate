@@ -35,6 +35,33 @@
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application.tailwind", "data-turbo-track": "reload" %>
 
+        <style>
+      :root {
+        --background-gradient: radial-gradient(circle, rgba(3, 167, 157, 0.2), rgba(3, 167, 157, 0));
+        --text-color: #010101;
+        --background-color: #f0f0f0;
+        --foreground-rgb: #fff;
+        --background-start-rgb: #fff;
+        --background-end-rgb: #fff;
+
+        font-family: <%= @primary_font %>;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-color: #f0f0f0;
+        --background-color: #010101;
+        --foreground-rgb: #010101;
+        --background-start-rgb: #010101;
+        --background-end-rgb: #010101;
+      }
+    }
+
+    html, body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+    </style>
   </head>
 
   <body>

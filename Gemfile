@@ -77,4 +77,4 @@ gem "tailwindcss-rails"
 
 gem "redcarpet"
 
-gem 'rubyblok', git: 'https://github.com/100Starlings/rubyblok', branch: 'caching-storybloks-pages-rb-223'
+gem 'rubyblok', git: 'https://github.com/100Starlings/rubyblok', branch: 'main'

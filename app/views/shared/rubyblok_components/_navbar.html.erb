@@ -1,7 +1,7 @@
 <div class="navbar">
   <a href="/">
-    <img src="<%= blok.logo.filename %>" alt="" class="nav-logo-light"/>
-    <img src="<%= blok.logo_dark.filename %>" alt="" class="nav-logo-dark"/>
+    <img src="<%= blok.logo.filename %>" alt="" class="nav_logo nav-logo-light"/>
+    <img src="<%= blok.logo_dark.filename %>" alt="" class="nav_logo nav-logo-dark"/>
   </a>
 
 <span class="nav_content_wrapper">
@@ -12,7 +12,8 @@
   <div class="mobile_nav_wrapper">
     <button onclick="toggleMobileNav()" class="">
       <span id="mobileNavIcon">
-        <%= image_tag blok.open_mobile_nav_icon.filename, alt: "", class: "h-8 w-8 bg-cover" %>
+        <%= image_tag blok.open_mobile_nav_icon.filename, alt: "", class: "h-8 w-8 bg-cover mobile-nav-icon" %>
+        <%= image_tag blok.open_mobile_nav_icon_dark_mode.filename, alt: "", class: "h-8 w-8 bg-cover mobile-nav-icon-dark" %>
       </span>
     </button>
   </div>
@@ -59,7 +60,7 @@
 
     // Update mobile navigation icon
     mobileNavIcon.innerHTML = isMobileNavOpen
-      ? '<%= image_tag blok.close_mobile_nav_icon.filename, alt: "", class: "h-8 w-8 bg-cover" %>'
-      : '<%= image_tag blok.open_mobile_nav_icon.filename, alt: "", class: "h-8 w-8 bg-cover" %>';
+      ? '<%= image_tag blok.close_mobile_nav_icon.filename, alt: "", class: "h-8 w-8 bg-cover mobile-nav-icon" %><%= image_tag blok.close_mobile_nav_icon_dark_mode.filename, alt: "", class: "h-8 w-8 bg-cover mobile-nav-icon-dark" %>'
+      : '<%= image_tag blok.open_mobile_nav_icon.filename, alt: "", class: "h-8 w-8 bg-cover mobile-nav-icon" %><%= image_tag blok.open_mobile_nav_icon_dark_mode.filename, alt: "", class: "h-8 w-8 bg-cover mobile-nav-icon-dark" %>';
   }
 </script>
