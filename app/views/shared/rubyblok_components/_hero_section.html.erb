@@ -1,21 +1,19 @@
-<%= editable_component(component) %>
+
 	<section
 		class="hero_section">
 		<div class="hero_content_wrapper">
 			<div
 				class="hero_header">
-				<%= render_content(component["header"]) %>
+				<%= rubyblok_content_tag(blok.header) %>
 			</div>
 
 			<div
 				class="hero_subtitle">
-				<%= render_content(component["subheader"]) %>
+				<%= rubyblok_content_tag(blok.subheader) %>
 			</div>
 
 			<div class="hero_cta_wrapper">
-			  <% component["cta_buttons"].each do |blok| %>
-      		<%= render_component(blok) %>
-        <% end %>
+			  <%= rubyblok_blocks_tag(blok.cta_buttons) %>
 			</div>
 		</div>
 	</section>

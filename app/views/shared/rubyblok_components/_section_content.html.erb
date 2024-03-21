@@ -1,10 +1,8 @@
-<%= editable_component(component) %>
-
-<div class="section_content <%= component["layout"] %>">
+<div class="section_content <%= blok.layout %>">
 			<div class="hidden md:block md:px-0 xl:p-0 w-full relative">
 				<div class="relative h-[26rem] w-full flex items-center">
 					<div class="p-0 rounded-lg overflow-hidden h-[20rem] w-full max-w-2xl relative border-0 border-black bg-cover">
-            <img src="<%= component["image"]['filename'] %>" alt="" class="h-full w-full bg-cover"/>
+            <img src="<%= blok.image.filename %>" alt="" class="h-full w-full bg-cover"/>
 					</div>
 				</div>
 			</div>
@@ -16,15 +14,15 @@
 						<span
 							class="md:block hidden border-2 rounded-full border-gray-600 bg-black absolute left-[-3.2em] mt-3 p-2 h-2 w-2 text-gray-900"></span>
 						<div class="flex items-center bg-blue p-2 rounded-md h-10 min-w-[2.5rem] max-w-[2.5rem] md:mr-4 text-white">
-									<img src="<%= component["icon"]['filename'] %>" alt="" cclass="rounded-lg h-full w-full">    
+									<img src="<%= blok.icon.filename %>" alt="" cclass="rounded-lg h-full w-full">
 						</div>
 						<div class="flex flex-col gap-4">
 							<span>
 								<div class="text-left font-semibold text-xl mb-2 text-gray-400">
-									<%= render_content(component["title"]) %>
+									<%= rubyblok_content_tag(blok.title) %>
 								</div>
 								<div class="text-gray-400 text-left">
-									<%= render_content(component["text"]) %>
+									<%= rubyblok_content_tag(blok.text) %>
 
 								</div>
 							</span>

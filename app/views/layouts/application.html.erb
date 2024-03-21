@@ -2,19 +2,67 @@
 <html>
   <head>
     <title>StoryblokDemo</title>
+    <%= tag :meta, name: 'title', content: @meta_title&.html_safe %>
+    <%= tag :meta, name: 'description', content: @meta_description&.html_safe %>
+
+    <%= tag :meta, name: 'keywords', content: @keywords&.html_safe %>
+    <%= tag :meta, name: 'robots', content: @robots&.html_safe %>
+    
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    # <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    # <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    # <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-    # <%= stylesheet_link_tag "application.tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application.tailwind", "data-turbo-track": "reload" %>
+
+    <%# The styles are coming from the site-config and defined in the pages_controller.rb file for dynamic import %>
+    <%# Note: the dynamic styles are not applicable for the static layout %>
+    <style>
+      :root {
+        --background-gradient: <%= @background_gradient %>;
+        --primary-color: <%= @primary_color %>;
+        --secondary-color: <%= @secondary_color %>;
+        --background-color: <%= @background_color %>;
+        --card-bg-color: <%= @card_bg_color %>;
+        --opbg: <%= @opbg %>;
+
+        --foreground-rgb: #f0f0f0;
+        --background-start-rgb: #f0f0f0;
+        --background-end-rgb: #f0f0f0;
+
+        font-family: <%= @primary_font %>;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary-color: <%= @primary_color_dark_mode %>;
+          --secondary-color: <%= @secondary_color_dark_mode %>;
+          --background-color: <%= @background_color_dark_mode %>;
+          --card-bg-color: <%= @card_bg_color_dark_mode %>;
+          --opbg: <%= @opbg_dark_mode %>;
+
+          --foreground-rgb: #010101;
+          --background-start-rgb: #010101;
+          --background-end-rgb: #010101;
+        }
+      }
+
+      html, body {
+        background-color: var(--background-color);
+        color: var(--secondary-color);
+      }
+    </style>
   </head>
 
   <body>
+
+    <%= rubyblok_story_tag('components/default-header') %>
     <main class="page_container">
+      <div class="gradient-block"></div>
       <%= yield %>
     </main>
+
   </body>
 </html>
