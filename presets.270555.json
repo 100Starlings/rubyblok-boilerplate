@@ -1,0 +1,293 @@
+{
+  "presets": [
+    {
+      "id": 2111974,
+      "name": "Boilerplate",
+      "content": {
+        "keywords": "Rubyblok Boilerplate",
+        "no_index": true,
+        "component": "page",
+        "meta_title": "Rubyblok Boilerplate",
+        "default_navbar": true,
+        "page_container": [
+          {
+            "gap": "gap-6",
+            "_uid": "b39e56e1-f22e-43c5-bfdf-ae50084dfe2e",
+            "component": "gap"
+          },
+          {
+            "_uid": "5292dc5f-92d8-4acf-857e-4476f533e680",
+            "hidden": "show",
+            "layout": "flex-col",
+            "component": "content_section",
+            "align_items": "center",
+            "section_content": [
+              {
+                "_uid": "8f35bfd4-433e-4d0c-b821-8436ac97143f",
+                "header": "Get started by editing <code>/application.html.erb</code>",
+                "component": "header"
+              },
+              {
+                "_uid": "9721b435-449c-42fb-b25d-4b629433da50",
+                "text": "or create your own components in <code>shared/rubyblok_components</code>",
+                "component": "text"
+              },
+              {
+                "gap": "gap-3",
+                "_uid": "c20f6a96-bfdb-4601-8945-8507b658aa7d",
+                "component": "gap"
+              }
+            ]
+          },
+          {
+            "_uid": "82a5bbb6-2b6d-4a74-a18a-b39a7cf4774e",
+            "hidden": "show",
+            "layout": "grid-2",
+            "component": "content_section",
+            "align_items": "top",
+            "section_content": [
+              {
+                "_uid": "d4312cca-82c3-4aaa-9f55-623e621848a8",
+                "icon": {
+                  "id": 14651757,
+                  "alt": "",
+                  "name": "",
+                  "focus": "",
+                  "title": "",
+                  "source": "",
+                  "filename": "https://a.storyblok.com/f/270555/28x28/0f84150002/docs-icon.svg",
+                  "copyright": "",
+                  "fieldtype": "asset",
+                  "meta_data": {},
+                  "is_private": false,
+                  "is_external_url": false
+                },
+                "text": "Read more about the Rubyblok boilerplate",
+                "title": "Docs →",
+                "card_link": "https://github.com/100Starlings/rubyblok-boilerplate",
+                "component": "content_card",
+                "with_icon": "with_icon",
+                "text_align": "left",
+                "icon_placement": "icon_top"
+              },
+              {
+                "_uid": "1af9e266-8ccf-4116-9d1d-ca082b2c7aaf",
+                "icon": {
+                  "id": 14651779,
+                  "alt": "",
+                  "name": "",
+                  "focus": "",
+                  "title": "",
+                  "source": "",
+                  "filename": "https://a.storyblok.com/f/270555/24x24/0fc14dfc73/learn-icon.svg",
+                  "copyright": "",
+                  "fieldtype": "asset",
+                  "meta_data": {},
+                  "is_private": false,
+                  "is_external_url": false
+                },
+                "text": "Find out more about the Rubyblok Gem and it's features",
+                "title": "Learn →",
+                "card_link": "https://github.com/100Starlings/rubyblok",
+                "component": "content_card",
+                "with_icon": "with_icon",
+                "text_align": "left",
+                "icon_placement": "icon_top"
+              }
+            ]
+          },
+          {
+            "gap": "gap-6",
+            "_uid": "b77f6ded-f88c-4310-b62e-de3312f6d28c",
+            "component": "gap"
+          }
+        ],
+        "meta_description": "Rubyblok Boilerplate"
+      },
+      "component_id": 5154038,
+      "image": "",
+      "color": "",
+      "icon": "",
+      "description": ""
+    },
+    {
+      "id": 2111975,
+      "name": "Boilerplate Config",
+      "content": {
+        "_uid": "fdc179ea-5623-4b47-8dc1-d7b738d3bab7",
+        "opbg": {
+          "_uid": "a41ecbe4-5531-4b0a-b5f5-e14e93ef3d35",
+          "color": "rgb(255 255 255 / 0.6)",
+          "plugin": "native-color-picker"
+        },
+        "component": "site-config",
+        "primary_font": "Geist, sans-serif",
+        "card_bg_color": {
+          "_uid": "f893d01d-8dc0-4fb5-973a-8d73e004ab98",
+          "color": "rgb(255 255 255 / 0.33)",
+          "plugin": "native-color-picker"
+        },
+        "primary_color": {
+          "_uid": "d35bbf21-49ba-4b1a-aa15-8aa7de0beea8",
+          "color": "#03A79D",
+          "plugin": "native-color-picker"
+        },
+        "opbg_dark_mode": {
+          "_uid": "41051e6c-7bc4-4ec0-9bc7-0bf8b27d02e6",
+          "color": "rgb(0 0 0 / 0.6)",
+          "plugin": "native-color-picker"
+        },
+        "secondary_color": {
+          "_uid": "bd34c2ed-b3d4-45fd-8a26-76c8fa3f0d63",
+          "color": "#010101",
+          "plugin": "native-color-picker"
+        },
+        "background_color": {
+          "_uid": "eaadc53b-dd5c-4004-957e-3e43d44737a3",
+          "color": "#f0f0f0",
+          "plugin": "native-color-picker"
+        },
+        "background_gradient": "radial-gradient(circle, rgba(3, 167, 157, 0.2), rgba(3, 167, 157, 0))",
+        "card_bg_color_dark_mode": {
+          "_uid": "e8c6698a-948a-4ee2-baf5-fe066fd53b6f",
+          "color": "rgb(0 0 0 / 0.33)",
+          "plugin": "native-color-picker"
+        },
+        "primary_color_dark_mode": {
+          "_uid": "31a96785-6789-48ec-a1ce-86d91cc00fa5",
+          "color": "#03A79D",
+          "plugin": "native-color-picker"
+        },
+        "secondary_color_dark_mode": {
+          "_uid": "b5058f68-36fc-4262-9cd3-03271ae796da",
+          "color": "#f0f0f0",
+          "plugin": "native-color-picker"
+        },
+        "background_color_dark_mode": {
+          "_uid": "ca98890d-8b19-49b9-beee-5cf737eeb1f8",
+          "color": "#010101",
+          "plugin": "native-color-picker"
+        }
+      },
+      "component_id": 5528689,
+      "image": "",
+      "color": "",
+      "icon": "",
+      "description": ""
+    },
+    {
+      "id": 2111976,
+      "name": "Boilerplate Navbar",
+      "content": {
+        "_uid": "95f7a9b5-03b0-44ef-9a8d-61073e22e06d",
+        "logo": {
+          "id": 14644190,
+          "alt": "",
+          "name": "",
+          "focus": "",
+          "title": "",
+          "source": "",
+          "filename": "https://a.storyblok.com/f/270555/120x33/eef38d69a7/rubyblok-boilerplate-by-starlings.svg",
+          "copyright": "",
+          "fieldtype": "asset",
+          "meta_data": {},
+          "is_private": false,
+          "is_external_url": false
+        },
+        "nav_cta": [
+          {
+            "_uid": "81019531-8cb0-45b4-a030-5a1f9f8dea35",
+            "type": "green",
+            "title": "Docs",
+            "component": "button",
+            "button_link": "https://github.com/100Starlings/rubyblok-boilerplate"
+          }
+        ],
+        "component": "navbar",
+        "logo_dark": {
+          "id": 14714435,
+          "alt": "",
+          "name": "",
+          "focus": "",
+          "title": "",
+          "source": "",
+          "filename": "https://a.storyblok.com/f/270555/120x33/fdf924c92a/rubyblok_green_logo_by_starlings_light.svg",
+          "copyright": "",
+          "fieldtype": "asset",
+          "meta_data": {},
+          "is_private": false,
+          "is_external_url": false
+        },
+        "nav_links": [
+          {
+            "_uid": "e2e1e356-f212-4a64-acc5-f1451d408415",
+            "nav_link": "/home",
+            "component": "nav_link",
+            "nav_link_text": "Home"
+          }
+        ],
+        "open_mobile_nav_icon": {
+          "id": 13868408,
+          "alt": "",
+          "name": "",
+          "focus": "",
+          "title": "",
+          "source": "",
+          "filename": "https://a.storyblok.com/f/270555/32x30/76b09f3079/mobile_menu_open_icon.svg",
+          "copyright": "",
+          "fieldtype": "asset",
+          "meta_data": {},
+          "is_private": false,
+          "is_external_url": false
+        },
+        "close_mobile_nav_icon": {
+          "id": 13868409,
+          "alt": "",
+          "name": "",
+          "focus": "",
+          "title": "",
+          "source": "",
+          "filename": "https://a.storyblok.com/f/270555/30x30/c4630bebd8/mobile_menu_close_icon.svg",
+          "copyright": "",
+          "fieldtype": "asset",
+          "meta_data": {},
+          "is_private": false,
+          "is_external_url": false
+        },
+        "open_mobile_nav_icon_dark_mode": {
+          "id": 14869024,
+          "alt": "",
+          "name": "",
+          "focus": "",
+          "title": "",
+          "source": "",
+          "filename": "https://a.storyblok.com/f/270555/32x30/e8dc99987a/open_mobile_nav_icon_dark_mode.svg",
+          "copyright": "",
+          "fieldtype": "asset",
+          "meta_data": {},
+          "is_private": false,
+          "is_external_url": false
+        },
+        "close_mobile_nav_icon_dark_mode": {
+          "id": 14869023,
+          "alt": "",
+          "name": "",
+          "focus": "",
+          "title": "",
+          "source": "",
+          "filename": "https://a.storyblok.com/f/270555/30x30/a2108346f6/close_mobile_nav_icon_dark_mode.svg",
+          "copyright": "",
+          "fieldtype": "asset",
+          "meta_data": {},
+          "is_private": false,
+          "is_external_url": false
+        }
+      },
+      "component_id": 5489211,
+      "image": "",
+      "color": "",
+      "icon": "",
+      "description": ""
+    }
+  ]
+}
