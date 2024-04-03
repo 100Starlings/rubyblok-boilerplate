@@ -1,6 +1,8 @@
+require 'dotenv/load'
 require 'storyblok'
 
-client = Storyblok::Client.new(oauth_token: '2RQ0DDQzWayDQoYkTELmeAtt-235597-pkxR2GHBspL1X7mrXgHp')
+# Initialize Storyblok client
+client = Storyblok::Client.new(oauth_token: ENV['OAUTH_TOKEN'])
 
 # Create a new space
 new_space = {

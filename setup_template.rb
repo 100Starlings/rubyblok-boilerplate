@@ -1,8 +1,9 @@
+require 'dotenv/load'
 require 'storyblok'
 require 'json'
 
 # Initialize Storyblok client
-client = Storyblok::Client.new(oauth_token: '2RQ0DDQzWayDQoYkTELmeAtt-235597-pkxR2GHBspL1X7mrXgHp')
+client = Storyblok::Client.new(oauth_token: ENV['OAUTH_TOKEN'])
 
 # Get list of spaces
 response = client.get('/spaces/')
