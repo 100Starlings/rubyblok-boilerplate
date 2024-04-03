@@ -1,6 +1,6 @@
 require 'storyblok'
 
-client = Storyblok::Client.new(oauth_token: '2RQ0DDQzWayDQoYkTELmeAtt-235597-pkxR2GHBspL1X7mrXgHp')
+client = Storyblok::Client.new(oauth_token: ENV['OAUTH_TOKEN'])
 
 # Delete default homepage
 response = client.get('/spaces/')
