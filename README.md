@@ -107,32 +107,35 @@ local-ssl-proxy --source 3333 --target 3000 --cert localhost.pem --key localhost
 This will start a proxy server. 
 
 ### Demo blocks creation
-Add your oauth token to the .env file
+1. Add your OAUTH token to the .env file
+storyblok.com > My account > Account Settings > Personal access token > Generate new token
 
-Create template space via
-run the following rake task:
+2. Create a new space for the template by running:
+
 ```
-rake storyblok:create_template_space
-```
-
-Manually select a plan for the space (Community is free)
-
-Delete demo stories via:
-run `ruby delete_default_story.rb`
-
-Login to the storyblok CLI via storyblok login
-It needs nodejs 18+ installed
-*In some cases `chmod -R 0600 /Users/{username}/.netrc` is needed to be ran*
-`npm i storyblok -g`
-run `storyblok push-components` CLI command via
-```
-storyblok push-components ./components.270555.json --space {your_new_space_id} --presets-source ./presets.270555.json
+bundle exec rake storyblok:add_template_stories
 ```
 
-Add template stories:
-run the following rake task:
+After the space is created (might need to refresh the page) select a plan according to your needs
+The region is set to EU by default which needs to ben changed based on your preference
+
+
+3. Login to the Storyblok CLI:
+
 ```
-rake storyblok:add_template_stories
+storyblok login
 ```
+
+NOTE: The storyblok CLI tool is added via npm ( npm i storyblok -g ) and it needs nodejs 18 or above installed
+In some cases chmod -R 0600 /Users/{username}/.netrc is needed to be ran due to a known issue
+
+
+4. Add the template stories by running:
+
+```
+bundle exec rake storyblok:add_template_space
+```
+
+Follow the rest of the readme to run and vie the project locally (proxy has to be setup and preview URL changed on Storyblok to your local one)
 
 Now, just go to the Storyblok Space and it will be working! :tada:
