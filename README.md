@@ -107,7 +107,32 @@ local-ssl-proxy --source 3333 --target 3000 --cert localhost.pem --key localhost
 This will start a proxy server. 
 
 ### Demo blocks creation
-WIP :construction:
-(Automation script here)
+Add your oauth token to the .env file
+
+Create template space via
+run the following rake task:
+```
+rake storyblok:create_template_space
+```
+
+Manually select a plan for the space (Community is free)
+
+Delete demo stories via:
+run `ruby delete_default_story.rb`
+
+Login to the storyblok CLI via storyblok login
+It needs nodejs 18+ installed
+*In some cases `chmod -R 0600 /Users/{username}/.netrc` is needed to be ran*
+`npm i storyblok -g`
+run `storyblok push-components` CLI command via
+```
+storyblok push-components ./components.270555.json --space {your_new_space_id} --presets-source ./presets.270555.json
+```
+
+Add template stories:
+run the following rake task:
+```
+rake storyblok:add_template_stories
+```
 
 Now, just go to the Storyblok Space and it will be working! :tada:
