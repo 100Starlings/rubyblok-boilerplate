@@ -113,7 +113,7 @@ storyblok.com > My account > Account Settings > Personal access token > Generate
 2. Create a new space for the template by running:
 
 ```
-bundle exec rake storyblok:add_template_stories
+bundle exec rake storyblok:create_template_space
 ```
 
 After the space is created (might need to refresh the page) select a plan according to your needs
@@ -133,7 +133,7 @@ In some cases chmod -R 0600 /Users/{username}/.netrc is needed to be ran due to 
 4. Add the template stories by running:
 
 ```
-bundle exec rake storyblok:add_template_space
+bundle exec rake storyblok:add_template_stories
 ```
 
 Follow the rest of the readme to run and vie the project locally (proxy has to be setup and preview URL changed on Storyblok to your local one)
