@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <meta property="og:title" content="Demo page">
+    <meta property="og:description" content="Add your own description">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+
+    <main class="page">
+      <%= yield %>
+    </main>
+
+    
+  </body>
+</html>
